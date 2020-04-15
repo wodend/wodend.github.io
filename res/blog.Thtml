@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"$if(lang)$ lang="$lang$" xml:lang="$lang$"$endif$>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="date" content="$date-meta$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+  <style type="text/css">code{white-space: pre;}</style>
+$if(quotes)$
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+$endif$
+$if(highlighting-css)$
+  <style type="text/css">
+$highlighting-css$
+  </style>
+$endif$
+$for(css)$
+  <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
+$endfor$
+$if(math)$
+  $math$
+$endif$
+$for(header-includes)$
+  $header-includes$
+$endfor$
+</head>
+
+
+<body data-gr-c-s-loaded="true">
+
+  $if(title)$
+  <div class="ui main text container">
+    <h1 class="ui header">$title$</h1>
+    <p>
+    $if(short)$
+    $short$
+    $endif$
+    $if(tags)$
+      <b>Tags: </b>
+      $for(tags)$
+      $tags$
+      $endfor$
+    $endif$
+    </p>
+  </div>
+  $endif$
+
+  <div class="ui borderless main menu" style="">
+    <div class="ui text container">
+      <div class="header item">
+        <a href="../"><img class="logo" src="../favicon.ico"></a>
+        frainfreeze's blog
+        </div>
+      <a href="../pages/bookshelf.html" class="item">Reading</a>
+      <a href="../posts" class="item">Archive</a>
+      <a href="../pages/about.html" class="ui right floated item">
+        About me
+      </a>
+    </div>
+  </div><div class="ui borderless main menu placeholder" style="display: none;">
+    <div class="ui text container">
+      <div class="header item">
+        <a href="../"><img class="logo" src="../favicon.ico"></a>
+        frainfreeze's blog
+      </div>
+      <a href="../pages/books.html" class="item">Reading</a>
+      <a href="../posts" class="item">Archive</a>
+      <a href="../pages/about.html" class="ui right floated item">
+        About me
+      </a>
+    </div>
+  </div>
+
+  <div class="ui text container">
+    $for(include-before)$
+      $include-before$
+      $endfor$
+      $body$
+      $for(include-after)$
+      $include-after$
+      $endfor$
+    </div>
+  </div>
+
+
+
+</body></html>
